@@ -133,7 +133,7 @@ To get a better picture of the average number of bike shares per season, I put t
  ` labs(title = "Average number of bike share per season")`
  
  
-!(https://github.com/vader7412/Hunter/blob/main/graph%20of%20average%20number%20of%20bike%20share%20per%20season.png)
+![(https://github.com/vader7412/Hunter/blob/main/graph%20of%20average%20number%20of%20bike%20share%20per%20season.png)]
   
 
 For determining the average number of bike shares per month, each day of the week, and certain weather conditions, I used the same technique like before and here are the results: 
