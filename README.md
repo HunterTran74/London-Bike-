@@ -56,7 +56,9 @@ I first begin by checking for null values in the dataset by using the code liste
 
 `view(missinglondon_data)`
 
-!(
+![](<img width="640" alt="view(missing data)" src="https://github.com/vader7412/Hunter/assets/134894494/959a17bb-66c9-4fd0-96f8-b078848ccc48">)
+
+
 
 Fortunately  there were no null values
 
@@ -121,7 +123,8 @@ Then I take the results from the previous code and convert it into a data frame,
 `avgbikeshare_seasondf <- data.frame(Season=names(avgbikeshare_season),num_avgbikeshare=avgbikeshare_season)`
 
 This is the data frame: 
-(screen shot 
+
+![](<img width="270" alt="average number of bike share per season" src="https://github.com/vader7412/Hunter/assets/134894494/d9ed4c70-0fa5-4615-bb51-e3d0e33426f0">)
 
 
 To get a better picture of the average number of bike shares per season, I put the results in a bar graph to better illustrate the difference. The code for that is listed below: 
