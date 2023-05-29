@@ -52,7 +52,16 @@ In this stage, I will using various techniques for data cleaning and data manipu
 
 I first begin by checking for null values in the dataset by using the code listed below:
 
-`
+`missinglondon_data <- london_merged[apply(is.na(london_merged), 1, any), ]
+
+view(missinglondon_data)`
+
+!(
+
+
+
+
+
 
 
 
