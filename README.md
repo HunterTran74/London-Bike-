@@ -120,8 +120,8 @@ Then I take the results from the previous code and convert it into a data frame,
 
 `avgbikeshare_seasondf <- data.frame(Season=names(avgbikeshare_season),num_avgbikeshare=avgbikeshare_season)`
 
-This is the data frame : 
-
+This is the data frame: 
+(screen shot 
 
 
 To get a better picture of the average number of bike shares per season, I put the results in a bar graph to better illustrate the difference. The code for that is listed below: 
