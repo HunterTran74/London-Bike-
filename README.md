@@ -133,7 +133,8 @@ To get a better picture of the average number of bike shares per season, I put t
  ` labs(title = "Average number of bike share per season")`
  
  
-! [](graph of average number of bike share per season.png)
+! []()<img width="270" alt="average number of bike share per season" src="https://github.com/vader7412/Hunter/assets/134894494/8154c42d-ea94-4584-8871-f12a4b2933f6">
+
   
 
 For determining the average number of bike shares per month, each day of the week, and certain weather conditions, I used the same technique like before and here are the results: 
