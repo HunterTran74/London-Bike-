@@ -7,3 +7,6 @@
 #library(readr)
 #london_merged <- read_csv("~/Downloads/london_merged.csv")
 #View(london_merged)
+
+
+#the dataset came with metadata 
