@@ -56,7 +56,7 @@ I first begin by checking for null values in the dataset by using the code liste
 
 `view(missinglondon_data)`
 
-![]<img width="640" alt="view(missing data)" src="https://github.com/vader7412/Hunter/assets/134894494/959a17bb-66c9-4fd0-96f8-b078848ccc48">
+<img width="640" alt="view(missing data)" src="https://github.com/vader7412/Hunter/assets/134894494/959a17bb-66c9-4fd0-96f8-b078848ccc48">
 
 
 
