@@ -110,6 +110,8 @@ I use the same technique like the previous one , but this time it is to extract 
 
 Next, I will be doing some analysis such as finding the average number of bike shares based on different factors such as days of the week, seasons, months, and weather conditions. 
 
+
+
 For determining the average number of bike shares per season , I used the code below : 
 
 `avgbikeshare_season <- tapply (london_merged$cnt,london_merged$season,mean)`
@@ -124,44 +126,53 @@ This is the data frame :
 
 To get a better picture of the average number of bike shares per season, I put the results in a bar graph to better illustrate the difference. The code for that is listed below: 
 
-`ggplot(data =avgbikeshare_seasondf,aes(x=Season,y=num_avgbikeshare))+
+`ggplot(data =avgbikeshare_seasondf,aes(x=Season,y=num_avgbikeshare))+`
   
- geom_bar(stat="identity", fill="pink",width=0.5) + geom_text(aes(label=round(num_avgbikeshare,2)) ,vjust = -0.5,size=3)+
+` geom_bar(stat="identity", fill="pink",width=0.5) + geom_text(aes(label=round(num_avgbikeshare,2)) ,vjust = -0.5,size=3)+`
   
-  labs(title = "Average bike share per season")`
+ ` labs(title = "Average bike share per season")`
   
 
-For determining the average number of bike shares per month, each day of the week, and certain weather conditions, I used the same technique like before
-
-For average number of bike share per month: 
-
-`avgbikeshare_month <- tapply (london_merged$cnt,london_merged$month,mean)`
-
-`avgbikeshare_monthdf <- data.frame(Month=names(avgbikeshare_month),num_avgbikemonth=avgbikeshare_month)`
-
-The data frame : 
-
-
-I also the bar graph to better illustrate the results  : 
-
-`ggplot(data =avgbikeshare_monthdf,aes(x=Month,y=num_avgbikemonth))+
- 
- geom_bar(stat="identity", fill="pink",width=0.5) +  geom_text(aes(label=round(num_avgbikemonth,2)),vjust=-0.5,size =3)+
-  
-labs(title = "Average bike share per month")+scale_x_discrete(limits=c("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug", "Sep","Oct","Nov","Dec"))`
-
-
-For average number of bike shares each day of the week:
-
-`avgbikeshare_day <- tapply (london_merged$cnt,london_merged$days,mean)`
-
-`avgbikeshare_daydf <- data.frame(Day=names(avgbikeshare_day),num_avgbikeday=avgbikeshare_day)`
-
-The data frame :
+For determining the average number of bike shares per month, each day of the week, and certain weather conditions, I used the same technique like before and here are the results: 
 
 
 
-The bar graph : 
+The data frame for average number of bike shares per month  : 
+
+
+
+The bar graph for average number of bike shares per month   : 
+
+
+
+
+
+ The data frame for average number of bike shares for day of the week  :
+
+
+
+
+
+The bar graph for average number of bike shares for each day of the week:
+
+
+
+
+
+The data frame for average number of bike shares for different weather conditions   :
+
+
+
+
+The bar graph for average number of bike shares for different weather conditions:
+
+
+
+
+
+
+
+
 
 
 
