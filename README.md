@@ -1,4 +1,4 @@
-#**Project 1: London Bike sharing dataset** 
+#Project 1: London Bike sharing dataset** 
 
 For the start of this project, I came across the London Bike Sharing dataset on Kaggle.
 The link to the dataset can be found right [here](https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset).
@@ -57,6 +57,67 @@ I first begin by checking for null values in the dataset by using the code liste
 view(missinglondon_data)`
 
 !(
+
+Fortunately  there were no null values
+
+
+**Next, I perform some data manipulation by creating rows and renaming unique categorical values
+
+I begin by  making a new column that measures temperature in the "t1" column in Farenheit instead of in celsius. The code for that is listed below.  
+
+`london_merged$farenheit <- (london_merged$t1 *9/5) +32`
+
+After that, I took the unique values in the "season" column and convert those unique values into the respective seasons that they represent. The code for this is listed below:
+
+`london_merged$season <- ifelse(london_merged$season==0, "spring",london_merged$season)
+
+london_merged$season <- ifelse(london_merged$season==1, "summer",london_merged$season)
+
+london_merged$season <- ifelse(london_merged$season==2, "fall",london_merged$season)
+
+london_merged$season <- ifelse(london_merged$season==3, "winter",london_merged$season)`
+
+I use the same technique with the "weather_code" column : 
+
+`london_merged$weather_code <- ifelse(london_merged$weather_code==1, "clear",london_merged$weather_code)
+
+london_merged$weather_code <- ifelse(london_merged$weather_code==2, "scatter clouds/few clouds",london_merged$weather_code)
+
+london_merged$weather_code <- ifelse(london_merged$weather_code==3, "broken clouds",london_merged$weather_code)
+
+london_merged$weather_code <- ifelse(london_merged$weather_code==4, "cloudy",london_merged$weather_code)
+
+london_merged$weather_code <- ifelse(london_merged$weather_code==7, "Rain",london_merged$weather_code)
+
+london_merged$weather_code <- ifelse(london_merged$weather_code==10, "Rain with Thunderstorm",london_merged$weather_code)
+
+london_merged$weather_code <- ifelse(london_merged$weather_code==26, "Snowfall",london_merged$weather_code)`
+
+
+Then I decided to make a new column the represents the month from the "timestamp" column by extract the part the represents the month.
+The code for that is listed below : 
+
+`library (lubridate)
+
+london_merged$month <- month (london_merged$timestamp,label=TRUE)`
+
+I use the same technique like the previous one , but this time it is to extract the part that represents the days of the week 
+
+`london_merged$days <- weekdays(london_merged$timestamp)`
+
+## Analysis 
+
+Next, I will be doing some analysis such as finding the average number of bike shares based on different factors such as days of the week, seasons, months, and weather conditions. 
+
+
+
+
+
+
+
+
+
+
 
 
 
