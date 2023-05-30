@@ -69,6 +69,7 @@ I begin by  making a new column that measures temperature in the "t1" column in 
 
 `london_merged$farenheit <- (london_merged$t1 *9/5) +32`
 
+
 After that, I took the unique values in the "season" column and convert those unique values into the respective seasons that they represent. The code for this is listed below:
 
 `london_merged$season <- ifelse(london_merged$season==0, "spring",london_merged$season)`
@@ -78,6 +79,7 @@ After that, I took the unique values in the "season" column and convert those un
 `london_merged$season <- ifelse(london_merged$season==2, "fall",london_merged$season)`
 
 `london_merged$season <- ifelse(london_merged$season==3, "winter",london_merged$season)`
+
 
 I use the same technique with the "weather_code" column : 
 
@@ -103,6 +105,7 @@ The code for that is listed below :
 
 `london_merged$month <- month (london_merged$timestamp,label=TRUE)`
 
+
 I use the same technique like the previous one , but this time it is to extract the part that represents the days of the week 
 
 `london_merged$days <- weekdays(london_merged$timestamp)`
@@ -117,6 +120,7 @@ Next, I will be doing some analysis such as finding the average number of bike s
 For determining the average number of bike shares per season , I used the code below : 
 
 `avgbikeshare_season <- tapply (london_merged$cnt,london_merged$season,mean)`
+
 
 Then I take the results from the previous code and convert it into a data frame, basically a dataset in simpler terms. 
 
@@ -136,9 +140,15 @@ To get a better picture of the average number of bike shares per season, I put t
  ` labs(title = "Average number of bike share per season")`
  
  
-! []()<img width="270" alt="average number of bike share per season" src="https://github.com/vader7412/Hunter/assets/134894494/8154c42d-ea94-4584-8871-f12a4b2933f6">
+![graph of average number of bike share per season](https://github.com/vader7412/Hunter/assets/134894494/201c0359-8dc9-46e8-a0fb-1496e7514069)
+
+
+This makes sense as the average temperature in the summer are warmer than the other seasons based on the data frame below : 
+
+<img width="260" alt="average temperature per season " src="https://github.com/vader7412/Hunter/assets/134894494/9129efe6-59eb-435c-a65e-4703e29355ff">
 
   
+
 
 For determining the average number of bike shares per month, each day of the week, and certain weather conditions, I used the same technique like before and here are the results: 
 
@@ -147,14 +157,26 @@ For determining the average number of bike shares per month, each day of the wee
 The data frame for average number of bike shares per month  : 
 
 
+<img width="269" alt="average number of bike share per month " src="https://github.com/vader7412/Hunter/assets/134894494/5baa8280-ea74-4e28-b940-90c3a717162e">
+
+
+
+
 
 The bar graph for average number of bike shares per month   : 
 
+![graph of average number of bike share per month](https://github.com/vader7412/Hunter/assets/134894494/968d343d-f13f-4f44-b368-19209f75bab7)
 
 
 
 
- The data frame for average number of bike shares for day of the week  :
+
+
+The data frame for average number of bike shares for day of the week  :
+
+
+<img width="281" alt="average number of bike share per day of the week " src="https://github.com/vader7412/Hunter/assets/134894494/6d18ea0e-e38f-4592-ac59-8da84f5aa4fb">
+
 
 
 
@@ -163,10 +185,19 @@ The bar graph for average number of bike shares per month   :
 The bar graph for average number of bike shares for each day of the week:
 
 
+![ graph average number of bike share per day](https://github.com/vader7412/Hunter/assets/134894494/b76356b0-c467-4381-9c21-3827f9b6d567)
 
 
 
-The data frame for average number of bike shares for different weather conditions   :
+
+
+The data frame for average number of bike shares for different weather conditions:
+
+
+<img width="490" alt="average number of bike share for different weather condition " src="https://github.com/vader7412/Hunter/assets/134894494/91c72f9e-c42b-42b9-a0b8-ab6dde669021">
+
+
+
 
 
 
@@ -175,13 +206,7 @@ The bar graph for average number of bike shares for different weather conditions
 
 
 
-
-
-
-
-
-
-
+![graph of average number of bike shares on different weather conditions](https://github.com/vader7412/Hunter/assets/134894494/233c942e-354a-4ee2-b5c9-b9711d33d8f7)
 
 
 
@@ -189,7 +214,8 @@ The bar graph for average number of bike shares for different weather conditions
 
 ## Conclusion 
 
-Some suggestions for increasing the the number of bike shares would be to introduce a weekend pass or a seasonal pass. 
+Some suggestions for increasing the the number of bike shares would be to introduce a weekend pass or a seasonal pass. Some challenges that I encountered
+when working on this project was adjusting the lables on the axis of the graph and turning the unique values of the categorical fields into the string values like how they are.  
   
 
 
