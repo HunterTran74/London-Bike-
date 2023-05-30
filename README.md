@@ -143,7 +143,7 @@ To get a better picture of the average number of bike shares per season, I put t
 ![graph of average number of bike share per season](https://github.com/vader7412/Hunter/assets/134894494/201c0359-8dc9-46e8-a0fb-1496e7514069)
 
 
-This makes sense as the average temperature in the summer are warmer than the other seasons based on the data frame below : 
+This makes sense as the average temperature in fahrenheit in the summer are warmer than the other seasons based on the data frame below : 
 
 <img width="260" alt="average temperature per season " src="https://github.com/vader7412/Hunter/assets/134894494/9129efe6-59eb-435c-a65e-4703e29355ff">
 
