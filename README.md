@@ -80,6 +80,18 @@ After that, I took the unique values in the "season" column and convert those un
 `london_merged$season <- ifelse(london_merged$season==3, "winter",london_merged$season)`
 
 
+Here is an example  of before and after the code : 
+
+Before: 
+
+<img width="175" alt="Screen Shot 2023-05-29 at 5 39 37 PM" src="https://github.com/vader7412/Hunter/assets/134894494/47692592-a85a-4016-8357-7b5ce339b2be">
+
+After: 
+
+<img width="73" alt="Screen Shot 2023-05-29 at 5 41 32 PM" src="https://github.com/vader7412/Hunter/assets/134894494/bad6b827-f6a3-4296-9a49-7b53af22fb08">
+
+
+
 I use the same technique with the "weather_code" column : 
 
 `london_merged$weather_code <- ifelse(london_merged$weather_code==1, "clear",london_merged$weather_code)`
