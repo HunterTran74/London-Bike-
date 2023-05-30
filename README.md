@@ -1,4 +1,4 @@
-#Project 1: London Bike sharing dataset** 
+#Project 1: London Bike sharing dataset 
 
 For the start of this project, I came across the London Bike Sharing dataset on Kaggle.
 The link to the dataset can be found right [here](https://www.kaggle.com/datasets/hmavrodiev/london-bike-sharing-dataset).
@@ -63,7 +63,7 @@ I first begin by checking for null values in the dataset by using the code liste
 Fortunately  there were no null values
 
 
-**Next, I perform some data manipulation by creating rows and renaming unique categorical values
+**Next, I perform some data manipulation by creating rows and renaming unique categorical values**
 
 I begin by  making a new column that measures temperature in the "t1" column in Farenheit instead of in celsius. The code for that is listed below.  
 
